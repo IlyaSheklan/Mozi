@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Fonts */
+    @font-face {
+        font-family: 'Rubik';
+        font-weight: 400;
+        font-style: normal;
+        src: url('../fonts/Rubik-Regular.ttf') format('ttf'), 
+             url('../fonts/Rubik-Regular.woff') format('woff'),
+             url('../fonts/Rubik-Regular.woff2') format('woof2');
+    }
+    
+    @font-face {
+        font-family: 'Europa';
+        font-weight: 700;
+        font-style: bold;
+        src: url('../fonts/Rubik-Bold.ttf') format('ttf'), 
+             url('../fonts/Rubik-Bold.woff') format('woff'),
+             url('../fonts/Rubik-Bold.woff2') format('woff2');
+    }
+
+    body {
+        @apply font-rubik;
+    }
+
+    @import '~swiper/css';
+
+}
+
+@layer components {
+    .title-main {
+        @apply font-bold text-mainColor text-[24px] md:text-[44px] leading-[27px] md:leading-[57px] text-center;
+    }
+
+    .btn-main {
+        @apply bg-secondColor md:py-[14px] px-[32px] text-white leading-[24px] rounded-[6px] inline-block py-[10px];
+    }
+
+    .btn-main:hover {
+        @apply bg-[#722133];
+    }
+
+    .btn-sec {
+        @apply text-secondColor  md:py-[14px] py-[10px] px-[32px] bg-transparent border border-secondColor leading-[24px] rounded-[6px] inline-block;
+    }
+
+    .container {
+        @apply mx-auto px-4 2xl:max-w-[1580px] lg:max-w-[1140px] md:max-w-[920px] sm:max-w-[700px];
+    }
+
+    .swiper .swiper-button-prev:after {
+        @apply content-[''];
+    }
+
+    .swiper .swiper-button-next:after {
+        @apply content-[''];
+    }
+
+}
